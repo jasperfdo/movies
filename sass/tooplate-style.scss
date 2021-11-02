@@ -411,6 +411,70 @@ b, strong {
 }
 
 
+.cursor {  
+	position: absolute;
+	width: 3em;
+	height: 3em;
+	border-radius: 3em;
+	border: 4px solid black;
+	top: 37em;
+	left: 45em;
+	pointer-events: none;
+  
+	&::before{
+		position: absolute;
+		width: 1.5em;
+		height: 1.5em;
+		background: black;
+		border-radius: 50%;
+		margin: .5em;
+		content: "";
+	}
+  
+	
+  }
+  
+  .cursor, .cursor:before {
+	opacity: 0;
+  }
+  
+  .img-container .cursor {
+	animation: move-cursor 2s ease-in-out infinite; ;
+  }
+  
+  .img-container .cursor:before {
+	animation: move-center 2s ease-in-out infinite; ;
+  }
+  
+  @keyframes move-cursor {    
+	0% {
+	  opacity: 0;
+	  height: 3em;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	  transform: translateY(3em);   
+	  height: 5em;
+	}  
+  }
+
+  @keyframes move-center {    
+	0% {
+	  transform: translateY(0);
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	  transform: translateY(3em);	  
+	}  
+  }
+
+
 // OWL CAROUSEL
 .owl-carousel {
 	.owl-nav {
