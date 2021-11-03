@@ -760,14 +760,20 @@ b, strong {
   .custom-btn {
     display: block;
     margin: 10px 0;
+    left: 50%;
+    right: 50%;
   }
 
   .about.full-screen {
     padding-top: 15%;
+    left: 50%;
+    right: 50%;
   }
 
   .about-text {
     text-align: center;
+    left: 50%;
+    right: 50%;
   }
 
   .about-image {
