@@ -852,10 +852,14 @@ b, strong {
     	margin: 0.25em;
     	content: "";
   	}
-
+	
 	.custom-btn-group {
 		text-align: center;
+		left: 50%;
+    	right: 50%;
 	}
+
+
 
 	.custom-btn {
 		display: block;
