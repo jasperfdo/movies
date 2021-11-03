@@ -766,14 +766,14 @@ b, strong {
 
   .about.full-screen {
     padding-top: 15%;
-    left: 50%;
-    right: 50%;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .about-text {
     text-align: center;
-    left: 50%;
-    right: 50%;
+    left: 100%;
+    right: 100%;
   }
 
   .about-image {
@@ -789,6 +789,7 @@ b, strong {
     margin: 10px 0 0 0;
   }
 }
+
 @media (max-width: 320px) {
   .animated-text {
     margin-top: 0;
