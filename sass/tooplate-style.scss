@@ -31,6 +31,7 @@ $link-font-size: 16px;
 body {
 	font-family: $font-base;
 	padding-top: 70px;
+	background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
 }
 
 .full-screen {
@@ -108,7 +109,7 @@ b, strong {
 // ABOUT
 
 #about {
-	background: rgb(255, 255, 160);
+	background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
 }
 
 
@@ -128,7 +129,7 @@ b, strong {
 		font-size: $link-font-size; 
     }
     &.custom-btn-bg {
-    	background: $button-color;
+    	background: #2BC1FC;
 		color: $text-white;
 		&:hover {
 	    	background: $main-color;
@@ -187,12 +188,14 @@ b, strong {
 
 // MENU
 .navbar {
+	border-color: #FEE05C;
 	position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 999999;
-	background: rgb(255, 255, 160);
+	background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
+	background-color: yellow;//to reduce the glass nave feel
     will-change: transform;
     transition: transform 200ms linear;
 	&[class*="-unpinned"] {
@@ -203,9 +206,10 @@ b, strong {
       transform: translate(0, 0);
     }
     &[class*="headroom--not-top"] {
-    	background: $text-white;
-    	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
-    	border-bottom: 1px solid #f0f0f0;
+		background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);//movement nav color
+    	background-color: none;//yellow nav when between page 
+    	box-shadow: 0 1px 2px 0 none;//to cut the shadow
+    	border-bottom: 1px solid none;//to cut the border of nav
     	padding-top: 0;
     	padding-bottom: 0;
 		@include transition-effect;
@@ -257,6 +261,7 @@ b, strong {
 } 
 
 
+
 // HAMBURGER MENU
 .navbar-light {
 	.navbar-toggler-icon {
@@ -302,9 +307,24 @@ b, strong {
 	}
 }
 
+// PROJECTS
+#project {
+	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+// RESUME
+#resume {
+	background-image: linear-gradient(-20deg, #ff9a44 0%, #f6ae6f 100%);
+}
+
+// CONTACT
+#contact {
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
 
 // COPYRIGHT TEXT
 .copyright-text {
+	color: white;
 	font-size: 16px;
 	font-weight: $font-weight-normal;
 	display: block;
@@ -346,8 +366,21 @@ b, strong {
 }
 
 .dark-mode {
+
+	body {
+		background-image: none;
+	}
+
+	#project {
+		background-image: none;
+	}
+
+	#resume {
+		background-image: none;
+	}
+
 	transition: all 0.2s ease;
-	background: $dark-mode-color;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
 	.navbar-light .navbar-nav .nav-link {
 		color: rgba(255,255,255,0.8);
 		&:hover {
@@ -355,8 +388,18 @@ b, strong {
 			color: $main-color;
 		}
 	}
+
+	.navbar {		
+		&[class*="headroom--not-top"] {
+			background: #000000;//yellow nav when between page 
+			box-shadow: 0 1px 2px 0 #000000;//to cut the shadow
+			border-bottom: 1px solid #000000;//to cut the border of nav
+		}
+	}
+
 	.navbar {		
 		background: none;
+		border-color: black;
 	}
 
 	#about {
@@ -625,6 +668,9 @@ b, strong {
 
 
 // CONTACT FORM
+.mb-4 {
+	color: white;
+}
 .contact-form {
 	position: relative;
 	.form-control {
@@ -634,6 +680,7 @@ b, strong {
 		box-shadow: none;
 		font-weight: $font-weight-bold;
 		margin: 16px 0;
+		
 		&:not(textarea) {
 			height: 48px;
 		}
@@ -679,6 +726,12 @@ b, strong {
 			color: $main-color;
 		}
 	}
+}
+
+// FOOTER
+
+.footer {
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 

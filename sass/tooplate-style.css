@@ -2,6 +2,8 @@
 body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f9d423), to(#ffbb00c9));
+  background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
 }
 
 .full-screen {
@@ -76,7 +78,8 @@ b, strong {
 }
 
 #about {
-  background: #ffffa0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f9d423), to(#ffbb00c9));
+  background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
 }
 
 .custom-btn {
@@ -98,7 +101,7 @@ b, strong {
 }
 
 .custom-btn.custom-btn-bg {
-  background: #474559;
+  background: #2BC1FC;
   color: #ffffff;
 }
 
@@ -212,12 +215,15 @@ b, strong {
 }
 
 .navbar {
+  border-color: #FEE05C;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 999999;
-  background: #ffffa0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f9d423), to(#ffbb00c9));
+  background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
+  background-color: yellow;
   will-change: transform;
   -webkit-transition: -webkit-transform 200ms linear;
   transition: -webkit-transform 200ms linear;
@@ -236,10 +242,12 @@ b, strong {
 }
 
 .navbar[class*="headroom--not-top"] {
-  background: #ffffff;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
-  border-bottom: 1px solid #f0f0f0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f9d423), to(#ffbb00c9));
+  background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
+  background-color: none;
+  -webkit-box-shadow: 0 1px 2px 0 none;
+          box-shadow: 0 1px 2px 0 none;
+  border-bottom: 1px solid none;
   padding-top: 0;
   padding-bottom: 0;
   -webkit-transition: all 0.4s ease;
@@ -338,7 +346,22 @@ b, strong {
   position: relative;
 }
 
+#project {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#4481eb), to(#04befe));
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+#resume {
+  background-image: linear-gradient(-20deg, #ff9a44 0%, #f6ae6f 100%);
+}
+
+#contact {
+  background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(black));
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
 .copyright-text {
+  color: white;
   font-size: 16px;
   font-weight: normal;
   display: block;
@@ -383,7 +406,20 @@ b, strong {
 .dark-mode {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  background: #0c0c0d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(black));
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.dark-mode body {
+  background-image: none;
+}
+
+.dark-mode #project {
+  background-image: none;
+}
+
+.dark-mode #resume {
+  background-image: none;
 }
 
 .dark-mode .navbar-light .navbar-nav .nav-link {
@@ -396,8 +432,16 @@ b, strong {
   color: #E96F6F;
 }
 
+.dark-mode .navbar[class*="headroom--not-top"] {
+  background: #000000;
+  -webkit-box-shadow: 0 1px 2px 0 #000000;
+          box-shadow: 0 1px 2px 0 #000000;
+  border-bottom: 1px solid #000000;
+}
+
 .dark-mode .navbar {
   background: none;
+  border-color: black;
 }
 
 .dark-mode #about {
@@ -711,6 +755,10 @@ b, strong {
   border-top-right-radius: 1em;
 }
 
+.mb-4 {
+  color: white;
+}
+
 .contact-form {
   position: relative;
 }
@@ -769,6 +817,11 @@ b, strong {
 
 .social-links .uil:hover {
   color: #E96F6F;
+}
+
+.footer {
+  background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(black));
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 @media (min-width: 1270px) {
