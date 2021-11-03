@@ -818,77 +818,90 @@ b, strong {
 	
 
 	.animated-info {
-    	display: inline-block;
-    	vertical-align: top;
-    	margin-top: 5px;
-    	min-width: 400px;
-    	position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 5px;    
+		min-width: 400px;
+		position: relative;
 	}
 
 	.cursor{
-    	position: absolute;
-    	justify-content: center;
-    	align-content: center;
-    	align-items: center;
-    	left: 50%;
-    	right: 50%;
-    	width: 2em;
-    	height: 2em;
-    	border-radius: 3em;
-    	border: 4px solid black;
-    	top: 33em;
-    	pointer-events: none;    
+		position: absolute;
+	  justify-content: center;
+	  align-content: center;
+	  align-items: center;
+	  left: 47%;
+	  right: 45%;
+	  width: 2em;
+	  height: 2em;
+	  border-radius: 3em;
+	  border: 4px solid black;
+	  top: 33em;
+	  pointer-events: none;   
   	}
 
 	.cursor::before {
-    	position: absolute;
-    	justify-content: center;
-    	align-content: center;
-    	align-items: center; 
-    	width: 1em;
-   		height: 1em;
-    	background: #E96F6F;
-    	border-radius: 50%;
-    	margin: 0.25em;
-    	content: "";
+		position: absolute;
+	  justify-content: center;
+	  align-content: center;
+	  align-items: center; 
+	  width: 1em;
+		 height: 1em;
+	  background: #E96F6F;
+	  border-radius: 50%;
+	  margin: 0.25em;
+	  content: "";
   	}
 	
 	.custom-btn-group {
+		padding-left: 0%;
+		padding-right: 0%;
 		text-align: center;
 		left: 50%;
-    	right: 50%;
+		right: 50%;
 	}
 
 
 
 	.custom-btn {
+		padding-left: 0%;
+		padding-right: 0%;
 		display: block;
 		margin: 10px 0;
 		left: 50%;
-    	right: 50%;
+		right: 50%;
 	}
 
 	.about.full-screen {
 		padding-top: 15%;
 		left: 50%;
-    	right: 50%;
+		right: 50%;
 	}
 	  
-	.about-text {    
-		text-align: center;
-		left: 50%;
-    	right: 50%;
+	.about-text {
+		margin-left: 0%;
+		margin-right: 0%;    
+		padding-left: 0%;
+		padding-right: 0%;
+		column-width: 240px;
+		color-adjust: 240px;
 	}
 	
 	.about-image {
+		padding-left: 0%;
+		padding-right: 0%;
 		padding-top: 30%;
 	}
 
 	.owl-theme .owl-nav {
+		padding-left: 0%;
+		padding-right: 0%;
 		display: none;
 	}
 
 	.timeline-info small {
+		padding-left: 0%;
+		padding-right: 0%;
 		display: block;
 		margin: 10px 0 0 0;
 	}
@@ -901,8 +914,34 @@ b, strong {
 		margin-top: 0;
 	}
 
-	.about-text {
-		text-align: center;
+	.cursor {
+		position: absolute;
+	  justify-content: center;
+	  align-content: center;
+	  align-items: center;
+	  left: 50%;
+	  right: 50%;
+	  width: 2em;
+	  height: 2em;
+	  border-radius: 3em;
+	  border: 4px solid black;
+	  top: 35em;
+	  left: 45%;
+	  right: 50vw;
+	  pointer-events: none;
+	}
+  
+	.cursor::before {
+		position: absolute;
+	  justify-content: center;
+	  align-content: center;
+	  align-items: center; 
+	  width: 1em;
+		 height: 1em;
+	  background: #E96F6F;
+	  border-radius: 50%;
+	  margin: 0.25em;
+	  content: "";
 	}
 
 	.full-screen {
