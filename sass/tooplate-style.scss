@@ -108,9 +108,10 @@ b, strong {
 
 // ABOUT
 
-#about {
-	background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
-}
+// #about {
+// 	@include transition-effect;
+// 	background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
+// }
 
 
 // CUSTOM BUTTON
@@ -309,16 +310,19 @@ b, strong {
 
 // PROJECTS
 #project {
+	@include transition-effect;
 	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
 }
 
 // RESUME
 #resume {
+	@include transition-effect;
 	background-image: linear-gradient(-20deg, #ff9a44 0%, #f6ae6f 100%);
 }
 
 // CONTACT
 #contact {
+	@include transition-effect;
 	background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
@@ -379,7 +383,7 @@ b, strong {
 		background-image: none;
 	}
 
-	transition: all 0.2s ease;
+	transition: .2s;
 	background-image: linear-gradient(to right, #434343 0%, black 100%);
 	.navbar-light .navbar-nav .nav-link {
 		color: rgba(255,255,255,0.8);
@@ -403,6 +407,7 @@ b, strong {
 	}
 
 	#about {
+		transition: all 5s ease;
 		background: none;
 	}
 	.navbar {
@@ -414,7 +419,7 @@ b, strong {
 	}
 	.small-text {
 		transition: all 1s ease;
-		background: #0d0c15;
+		background: transparent;
 		color: $text-white;
 	}
 	.feature-card .uil,
@@ -732,6 +737,27 @@ b, strong {
 
 .footer {
 	background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+// SECTIONS
+
+section:nth-of-type(1) {background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);}
+section:nth-of-type(2) {background-image: linear-gradient(to right, #434343 0%, black 100%);}
+section:nth-of-type(3) {background-image: linear-gradient(to right, #434343 0%, black 100%);}
+section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, black 100%);}
+
+[data-scroll] {
+	transition: all 2s ease;
+}
+
+[data-scroll="in"] {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+[data-scroll="out"] {
+	opacity: 0;
+	transform: translateX(-200px);
 }
 
 

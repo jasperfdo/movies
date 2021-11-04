@@ -21,6 +21,7 @@ Jasper Fernando
 
 -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   </head>
   <body class="img-container" id="my-scrollbar">
 
@@ -73,7 +74,7 @@ Jasper Fernando
             <div class="row">
                 
                 <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text">
+                    <div class="about-text" data-scroll>
                         <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
                         <h1 class="animated animated-text">
                             <span class="mr-2">Hello, I'm</span>
@@ -111,10 +112,10 @@ Jasper Fernando
                   <div class="col-lg-11 text-center mx-auto col-12">
 
                       <div class="col-lg-8 mx-auto">
-                        <h2><span data-hover="Project">Projects</span> I Have Worked On!</h2>
+                        <h2 data-scroll><span data-hover="Project" >Projects</span> I Have Worked On!</h2>
                       </div>
 
-                      <div class="owl-carousel owl-theme">
+                      <div class="owl-carousel owl-theme" data-scroll>
                         <div class="item">
                           <div class="project-info">
                             <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
@@ -155,11 +156,10 @@ Jasper Fernando
     <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-6 col-12">
-                  <h2 class="mb-4">Experiences</h2>
+                  <h2 class="mb-4" data-scroll>Experiences</h2>
 
-                    <div class="timeline">
+                    <div class="timeline" data-scroll>
                         <div class="timeline-wrapper">
                              <div class="timeline-yr">
                                   <span><small>Jan</small>2020</span>
@@ -204,9 +204,9 @@ Jasper Fernando
                 </div>
 
                 <div class="col-lg-6 col-12">
-                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+                  <h2 class="mb-4 mobile-mt-2" data-scroll>Educations</h2>
 
-                    <div class="timeline">
+                    <div class="timeline" data-scroll>
                         <div class="timeline-wrapper">
                              <div class="timeline-yr">
                                   <span>2019</span>
@@ -249,7 +249,7 @@ Jasper Fernando
       <div class="container">
         <div class="row">
           
-          <div class="col-lg-5 mr-lg-5 col-12">
+          <div class="col-lg-5 mr-lg-5 col-12" data-scroll>
             <div class="google-map w-100">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.916784812946!2d78.15131351527815!3d8.79388859504708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03efa6547e89c5%3A0x51952dcd60917e71!2sStreet%20Number%205%2C%20Lions%20Town%2C%20CGE%20Colony%2C%20Thoothukudi%2C%20Tamil%20Nadu%20628003!5e0!3m2!1sen!2sin!4v1635849111500!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -269,7 +269,7 @@ Jasper Fernando
             </div>
           </div>
 
-          <div class="col-lg-6 col-12">
+          <div class="col-lg-6 col-12" data-scroll>
             <div class="contact-form">
               <h2 class="mb-4">Let's Spread Love <small>❤️</small></h2>
 
@@ -313,6 +313,8 @@ Jasper Fernando
           </div>
      </footer>
 
+     
+
      <!-- Putting jQuery into no-conflict mode. -->
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -330,6 +332,13 @@ Jasper Fernando
     <script src="js/owl.carousel.min.js"></script>
     <script src="./index.js"></script>
     <script src="js/smoothscroll.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+    <script>
+      ScrollOut({        
+        once: true
+      });
+    </script>
     
 
 
