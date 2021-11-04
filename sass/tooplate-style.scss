@@ -530,7 +530,7 @@ b, strong {
 	height: 2em;
 	border-radius: 3em;
 	border: 4px solid black;
-	top: 37em;
+	top: 45em;
 	pointer-events: none;
   
 	&::before{
@@ -741,7 +741,7 @@ b, strong {
 
 // SECTIONS
 
-section:nth-of-type(1) {background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);}
+section:nth-of-type(1) {height:100vh;background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);}
 section:nth-of-type(2) {background-image: linear-gradient(to right, #434343 0%, black 100%);}
 section:nth-of-type(3) {background-image: linear-gradient(to right, #434343 0%, black 100%);}
 section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, black 100%);}
@@ -762,12 +762,31 @@ section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, 
 
 
 // RESPONSIVE STYLES
-@media (min-width: 1270px) {
+@media (min-width: 2310px) {
+	.cursor{
+		top: 25em;
+	}
+
+}
+
+
+@media (max-width: 1550px) {
+	.cursor{
+		top: 35em;
+	}
+
+}
+
+
+@media (max-width: 1270px) {
 	.owl-theme {
 		.owl-dots {
 			position: relative;
 			bottom: 50px;
 		}
+	}
+	.cursor{
+		top: 48em;
 	}
 }
 
@@ -930,7 +949,7 @@ section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, 
 	  	height: 2em;
 	  	border-radius: 3em;
 	  	border: 4px solid black;
-	  	top: 33em;
+	  	top: 36em;
 	  	pointer-events: none;   
   	}
 
@@ -982,9 +1001,7 @@ section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, 
 	}
 	
 	.about-image {
-		padding-left: 0%;
-		padding-right: 0%;
-		padding-top: 30%;
+		display: none;
 	}
 
 	.owl-theme .owl-nav {
@@ -1008,6 +1025,10 @@ section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, 
 		margin-top: 0;
 	}
 
+	.about-image {
+		display: none;
+	}
+
 	.cursor {
 		position: absolute;
 		justify-content: center;
@@ -1019,7 +1040,7 @@ section:nth-of-type(4) {background-image: linear-gradient(to right, #434343 0%, 
 	  	height: 2em;
 	  	border-radius: 3em;
 	  	border: 4px solid black;
-	  	top: 35em;
+	  	top: 32em;
 	  	left: 45%;
 		right: 50vw;
 		pointer-events: none;
