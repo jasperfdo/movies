@@ -1170,15 +1170,17 @@ section:nth-of-type(4) {
     position: relative;
     display: block;
   }
+  [data-scroll] {
+    will-change: transform, scale, opacity;
+    -webkit-transform: translateY(6rem) scale(0.93);
+            transform: translateY(6rem) scale(0.93);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
   [data-scroll="in"] {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  [data-scroll="out"] {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
+            transform: translate3d(0px, 0px, 0px) scale(1);
   }
 }
 

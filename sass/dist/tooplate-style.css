@@ -942,14 +942,15 @@ section:nth-of-type(4) {
     display: block;
   }
 
-  [data-scroll=in] {
-    opacity: 1;
-    transform: translateY(0);
+  [data-scroll] {
+    will-change: transform, scale, opacity;
+    transform: translateY(6rem) scale(0.93);
+    transition: all 1s ease;
   }
 
-  [data-scroll=out] {
-    opacity: 0;
-    transform: translateY(50px);
+  [data-scroll=in] {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale(1);
   }
 }
 @media (max-width: 320px) {

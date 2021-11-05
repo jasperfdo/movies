@@ -1165,17 +1165,17 @@ section:nth-of-type(4) {
 		display: block;		
 	}
 
+	[data-scroll] {
+		will-change: transform, scale, opacity;
+		transform: translateY(6rem) scale(0.93);
+		transition: all 1s ease;
+		
+	}
+	
 	[data-scroll="in"] {
 		opacity: 1;
-		transform: translateY(0);
-	}
-
-	[data-scroll="out"] {
-		opacity: 0;
-		transform: translateY(50px);
-	}
-
-	
+		transform: translate3d(0px, 0px, 0px) scale(1);		
+	}	
 }
 
 
