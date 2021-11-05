@@ -360,6 +360,7 @@ strong {
 #project {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#4481eb), to(#04befe));
   background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
 }
@@ -368,6 +369,7 @@ strong {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 #resume {
@@ -438,6 +440,7 @@ strong {
 }
 
 .dark-mode #project {
+  overflow: hidden;
   background-image: none;
 }
 
@@ -906,6 +909,9 @@ section:nth-of-type(4) {
   .cursor {
     top: 25em;
   }
+  #project {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -918,6 +924,9 @@ section:nth-of-type(4) {
   .cursor {
     top: 37em;
   }
+  #project {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -927,6 +936,9 @@ section:nth-of-type(4) {
   }
   .cursor {
     top: 48em;
+  }
+  #project {
+    overflow: hidden;
   }
 }
 
@@ -957,6 +969,9 @@ section:nth-of-type(4) {
     border: 4px solid black;
     top: 26em;
     pointer-events: none;
+  }
+  #project {
+    overflow: hidden;
   }
   .cursor::before {
     position: absolute;
@@ -1057,6 +1072,9 @@ section:nth-of-type(4) {
             column-width: 240px;
     color-adjust: 240px;
   }
+  #project {
+    overflow: hidden;
+  }
   .animated-item {
     font-size: 28px;
   }
@@ -1076,6 +1094,9 @@ section:nth-of-type(4) {
   }
   .animated-item {
     font-size: 30px;
+  }
+  #project {
+    overflow: hidden;
   }
   .animated-info {
     display: inline-block;
