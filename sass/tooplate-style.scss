@@ -36,6 +36,7 @@ body {
 
 .full-screen {
 	padding: 8rem 0;
+	
 }
 
 .small-text {
@@ -134,7 +135,8 @@ strong {
 .custom-btn {
 	background: $border-color;
 	color: $body-font-color;
-	font-weight: $font-weight-bold;
+	font-weight: $font-weight-bold;	
+	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	border-radius: 50px;
 	padding: 13px 29px;
 	font-size: $small-font-size;
@@ -145,15 +147,18 @@ strong {
 	&:hover {
 		color: $main-color;
 		font-size: $link-font-size;
+		box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	}
 
 	&.custom-btn-bg {
 		background: #2BC1FC;
 		color: $text-white;
+		box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 
 		&:hover {
 			background: $main-color;
 			color: $text-white !important;
+			box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 		}
 	}
 }
@@ -163,21 +168,24 @@ strong {
 // ANIMATED TEXT
 .animated {
 	position: relative;
+	
 }
 
 .animated-info {
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 5px;
+	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	width: 400px;
 	position: relative;
 }
 
 .animated-item {
 	color: $main-color;
+	
 }
 
-.animated-item {
+.animated-item {	
 	font-size: 38px;
 	line-height: inherit;
 	display: block;
@@ -236,6 +244,7 @@ strong {
 .navbar {
 	border-color: #FEE05C;
 	position: fixed;
+	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	top: 0;
 	right: 0;
 	left: 0;
@@ -316,12 +325,13 @@ strong {
 
 // HAMBURGER MENU
 .navbar-light {
+	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	.navbar-toggler-icon {
 		background: none;
 	}
 }
 
-.navbar-toggler {
+.navbar-toggler {	
 	border: 0;
 	padding: 0;
 	width: 32px;
@@ -354,6 +364,7 @@ strong {
 	}
 
 	.navbar-toggler-icon {
+		box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 		background: $h1-font-color;
 		display: block;
 		width: 100%;
@@ -578,6 +589,7 @@ strong {
 }
 
 .timeline-yr {
+	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	background: $button-color;
 	border-radius: 100%;
 	position: absolute;
@@ -690,7 +702,7 @@ strong {
 }
 
 // OWL CAROUSEL
-.owl-carousel {	
+.owl-carousel {
 	padding-block: 5%;
 	.owl-nav {
 		span {
@@ -770,6 +782,7 @@ strong {
 
 // GOOGLE MAP
 .google-map {
+	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
 	iframe {
 		width: 100%;
 		border-top-left-radius: 1em;
@@ -858,7 +871,7 @@ strong {
 
 section:nth-of-type(1) {
 	height: 100vh;
-	background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
+	background-image: transparent;
 }
 
 section:nth-of-type(2) {
@@ -873,11 +886,45 @@ section:nth-of-type(4) {
 	background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
+// .project , .resume , .about , .contact {
+// 	height: 100vh;
+// 	width: 100%;
+// 	display: flex;
+// 	--scroll-length: 1.5;
+// 	height: calc( var(--scroll-length) * 100vh );
+// 	width: 100%;
+// }
+
+// .project , .resume , .about , .contact {
+// 	--scale: calc(.8 + 
+// 	  (.2 * var(--scroll-length) * var(--visible-y))
+// 	);
+// 	position: sticky;
+// 	top: 0;
+// 	left: 0;
+// 	margin: 0;
+// 	display: block; 
+// 	overflow: hidden;
+// 	will-change: transform;
+// 	transform: scale(var(--scale));
+  
+// 	&:before {
+// 	  content: '';
+// 	  position: absolute;
+// 	  top: 0;
+// 	  left: 0;
+// 	  width: 100%;
+// 	  height: 100%;
+// 	  z-index: 1;
+// 	  opacity: calc( var(--visible-y) );
+// 	}
+// }
 
 
 [data-scroll] {
 	will-change: transform, scale, opacity;
 	transform: translateY(6rem) scale(0.93);
+	opacity: 0;
 	transition: all 1s ease;
 	
 }
@@ -906,16 +953,36 @@ section:nth-of-type(4) {
 
 // RESPONSIVE STYLES
 @media (min-width: 2310px) {
-	.cursor {
-		top: 25em;
+	#about {
+		height: 100%;
+		display: inline-flex;
+	
 	}
+
+	#project {
+		height: 100%;
+	}
+	.col-lg-7 {
+		max-width: 800px;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 800px;
+    	width: 80%;
+    	margin: 0 auto;	
+		
+	}
+	
+	.cursor {
+		top: 38em;
+	}
+
 	#project {
 		overflow: hidden;
 	}
 }
 
 
-@media (min-width: 1920px) {
+@media (max-width: 1920px) {
 	.cursor {
 		top: 48em;
 	}
@@ -1191,14 +1258,13 @@ section:nth-of-type(4) {
 	[data-scroll] {
 		will-change: transform, scale, opacity;
 		transform: translateY(6rem) scale(0.93);
-		transition: all 1s ease;
-		
+		transition: all 1s ease;		
 	}
 	
 	[data-scroll="in"] {
 		opacity: 1;
 		transform: translate3d(0px, 0px, 0px) scale(1);		
-	}	
+	}
 }
 
 

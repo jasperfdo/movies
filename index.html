@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
   <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="sass/dist/tooplate-style.css">
+  <link rel="stylesheet" href="css/tooplate-style.css">
   <!--
 
 Jasper Fernando
@@ -99,7 +99,7 @@ Jasper Fernando
           </div>
         </div>
 
-        <div class="col-lg-5 col-md-12 col-12" >
+        <div class="col-lg-5 col-md-12 col-12" data-scroll>
           <div class="about-image" data-rate="-.4" data-direction="vertical">
             <img src="images/undraw/undraw_designer_re_5v95.svg" class="img-fluid" alt="svg image">
           </div>
@@ -110,13 +110,14 @@ Jasper Fernando
   </section>
 
   <!-- PROJECTS -->
-  <section class="project py-5" id="project">
-    <div class="container">
+  <section class="project py-5" id="project" data-scroll>
+    <div class="container" id="sec">
 
       <div class="row">
-        <div class="col-lg-11 text-center mx-auto col-12" data-rateY=".005" data-rateX=".05" data-direction="horizontal">
+        <div class="col-lg-11 text-center mx-auto col-12" data-rateY=".005" data-rateX=".05"
+          data-direction="horizontal">
           <!-- data-rateY="0.01" data-direction="horizontal" -->
-          <div class="col-lg-8 mx-auto"> 
+          <div class="col-lg-8 mx-auto">
             <h2 data-scroll><span data-hover="Project">Projects</span> I Have Worked On!</h2>
           </div>
 
@@ -158,7 +159,7 @@ Jasper Fernando
   </section>
 
   <!-- FEATURES -->
-  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume" data-rate="-0.2">
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume" data-rate="-0.2" >
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-12">
@@ -270,7 +271,7 @@ Jasper Fernando
   </section>
 
   <!-- CONTACT -->
-  <section class="contact py-5" id="contact" data-rate="-0.22">
+  <section class="contact py-5" id="contact" data-rate="-0.22" >
     <div class="container">
       <div class="row">
 
@@ -366,7 +367,7 @@ Jasper Fernando
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
   <script>
-    window.addEventListener('scroll', function(e){
+    window.addEventListener('scroll', function (e) {
       const target = document.querySelectorAll('.about-image , .col-lg-11 , .cursor');
 
       // console.log(target.style);
@@ -378,23 +379,23 @@ Jasper Fernando
 
       var index = 0;
       var length = target.length;  //target.length is that it counts all the classes mentioned in target
-      for(index; index<length; index++) {
+      for (index; index < length; index++) {
         var pos = window.pageYOffset * target[index].dataset.rate; //target[index] is that we are selecting the mentioned classes by list format!
-        
-        
-       
-        if(target[index].dataset.direction === "vertical"){          
-          target[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
-        
-        } else if(target[index].dataset.direction === "horizontal"){
+
+
+
+        if (target[index].dataset.direction === "vertical") {
+          target[index].style.transform = 'translate3d(0px, ' + pos + 'px, 0px)';
+
+        } else if (target[index].dataset.direction === "horizontal") {
           var posX = window.pageYOffset * target[index].dataset.ratex;
           var posY = window.pageYOffset * target[index].dataset.ratey;
 
-          target[index].style.transform = 'translate3d('+posX+'px, '+posY+'px, 0px)';
+          target[index].style.transform = 'translate3d(' + posX + 'px, ' + posY + 'px, 0px)';
         } else {
           target[index].style.transform = 'opacity=0';
         }
-        
+
       }
 
 
@@ -404,10 +405,24 @@ Jasper Fernando
   <script>
     ScrollOut({
       threshold: .5,
-      once: true
+      once: true,
+      //     onShown: function(el) {
+      //     if (!el.src) {
+      //        el.src = el.dataset.scroll;
+      //     }
+      //  }
     });
+
+
+
+
   </script>
 
+
+
+  <!-- CURSOR -->
+
+  <!--  CURSOR -->
 
 
 
