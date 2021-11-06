@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
   <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="sass/dist/tooplate-style.css">
+  <link rel="stylesheet" href="css/tooplate-style.css">
   <!--
 
 Jasper Fernando
@@ -26,7 +26,7 @@ Jasper Fernando
 
 <body class="img-container" id="my-scrollbar">
 
-
+  <div class="cursor"></div>
 
   <!-- MENU -->
   <nav class="navbar navbar-expand-sm navbar-light" data-colorscroll>
@@ -71,7 +71,8 @@ Jasper Fernando
 
 
   <!-- ABOUT -->
-  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" data-rate="-0.1">
+  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <!-- data-rate="-0.1" data-direction="vertical" -->
     <div class="container">
       <div class="row">
 
@@ -110,7 +111,7 @@ Jasper Fernando
   </section>
 
   <!-- PROJECTS -->
-  <section class="project py-5" id="project" data-scroll>
+  <section class="project py-5" id="project">
     <div class="container" id="sec">
 
       <div class="row">
@@ -337,6 +338,11 @@ Jasper Fernando
 
         <div class="col-lg-12 col-12">
           <p class="copyright-text text-center">Copyright &copy; 2019 Jasper Fernando . All rights reserved</p>
+          <div class="btn text-center">
+            <button class="btn1">cursor 1</button>
+            <button class="btn2" >cursor 2</button>
+            <button class="btn3">cursor 3</button>
+          </div>
           <p class="copyright-text text-center">Designed by <a rel="nofollow"
               href="https://www.linkedin.com/in/jasper-fernando">Jasper</a></p>
         </div>
@@ -357,13 +363,14 @@ Jasper Fernando
 
 
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/jquery-headroom.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/Headroom.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="./index.js"></script>
-  <script src="js/smoothscroll.js"></script>
+  <script src="js/smoothscroll.min.js"></script>
+  <script src="js/mouseani.min.js"></script>
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
   <script>
@@ -395,10 +402,7 @@ Jasper Fernando
         } else {
           target[index].style.transform = 'opacity=0';
         }
-
       }
-
-
     });
   </script>
 
