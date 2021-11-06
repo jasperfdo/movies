@@ -181,11 +181,10 @@ strong {
 }
 
 .animated-item {
-	color: $main-color;
-	
+	color: $main-color;	
 }
 
-.animated-item {	
+.animated-item {
 	font-size: 38px;
 	line-height: inherit;
 	display: block;
@@ -242,6 +241,7 @@ strong {
 
 // MENU
 .navbar {
+	transition: all 1s ease;
 	border-color: #FEE05C;
 	position: fixed;
 	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
@@ -263,6 +263,7 @@ strong {
 	}
 
 	&[class*="headroom--not-top"] {
+		transition: ease-in-out;
 		background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%); //movement nav color
 		background-color: none; //yellow nav when between page 
 		box-shadow: 0 1px 2px 0 none; //to cut the shadow
@@ -274,18 +275,21 @@ strong {
 }
 
 .navbar-brand {
+	transition: all 1s ease;
 	font-weight: $font-weight-bold;
 }
 
-.navbar-expand-sm {
-	.navbar-nav {
+.navbar-expand-sm {transition: all 1s ease;
+	.navbar-nav {transition: all 1s ease;
 		.nav-link {
+			transition: all 1s ease;
 			padding: 0 20px;
 		}
 	}
 }
 
 .nav-link {
+	transition: all 1s ease;
 	font-weight: $font-weight-bold;
 	font-size: 16px;
 	overflow: hidden;
@@ -315,6 +319,7 @@ strong {
 			font-weight: $font-weight-bold;
 
 			span {
+				
 				transform: translateY(-100%);
 			}
 		}
@@ -326,12 +331,14 @@ strong {
 // HAMBURGER MENU
 .navbar-light {
 	box-shadow: 0px 10px 40px rgba(0,0,0,.3);
+	transition: all 1s ease;
 	.navbar-toggler-icon {
 		background: none;
 	}
 }
 
 .navbar-toggler {	
+	transition: all 1s ease;
 	border: 0;
 	padding: 0;
 	width: 32px;
@@ -346,17 +353,21 @@ strong {
 	}
 
 	&[aria-expanded="true"] {
+		
 		.navbar-toggler-icon {
 			&:first-child {
+				transition: all .5s ease;
 				transform: rotate(45deg);
 				top: 6px;
 			}
 
 			&:nth-child(2) {
+				transition: all 1s ease;
 				display: none;
 			}
 
 			&:last-child {
+				transition: all 1s ease;
 				transform: rotate(-45deg);
 				bottom: 1px;
 			}
@@ -368,13 +379,17 @@ strong {
 		background: $h1-font-color;
 		display: block;
 		width: 100%;
-		height: 2px;
+		height: 5px;
 		margin: 5px 0;
+		border-radius: 5px;
 		@include transition-effect;
 		position: relative;
 	}
 }
 
+#navbarNav {
+	transition: all .5s ease-in-out;
+}
 
 
 // PROJECTS
@@ -479,7 +494,7 @@ strong {
 	.navbar {
 
 		//nav swipe border	
-		&[class*="headroom--not-top"] {
+		&[class*="headroom--not-top"] {			
 			background: #000000; //yellow nav when between page 
 			box-shadow: 0 1px 2px 0 #000000; //to cut the shadow
 			border-bottom: 1px solid #000000; //to cut the border of nav
@@ -556,7 +571,7 @@ strong {
 		color: $main-color;
 	}
 
-	.cursor {
+	.cursorr {
 		border: 4px solid white;
 	}
 }
@@ -625,7 +640,7 @@ strong {
 }
 
 // MOUSE CURSOR
-.cursor {
+.cursorr {
 	position: absolute;
 	justify-content: center;
 	align-content: center;
@@ -655,16 +670,16 @@ strong {
 
 }
 
-.cursor,
-.cursor:before {
+.cursorr,
+.cursorr:before {
 	opacity: 0;
 }
 
-.img-container .cursor {
+.img-container .cursorr {
 	animation: move-cursor 2s ease-in-out infinite;
 }
 
-.img-container .cursor:before {
+.img-container .cursorr:before {
 	animation: move-center 2s ease-in-out infinite;
 }
 
@@ -955,8 +970,7 @@ section:nth-of-type(4) {
 @media (min-width: 2310px) {
 	#about {
 		height: 100%;
-		display: inline-flex;
-	
+		display: inline-flex;	
 	}
 
 	#project {
@@ -972,7 +986,7 @@ section:nth-of-type(4) {
 		
 	}
 	
-	.cursor {
+	.cursorr {
 		top: 38em;
 	}
 
@@ -983,13 +997,13 @@ section:nth-of-type(4) {
 
 
 @media (max-width: 1920px) {
-	.cursor {
+	.cursorr {
 		top: 48em;
 	}
 }
 
 @media (max-width: 1550px) {
-	.cursor {
+	.cursorr {
 		top: 37em;
 		
 	}
@@ -1006,7 +1020,7 @@ section:nth-of-type(4) {
 			bottom: 50px;
 		}
 	}
-	.cursor {
+	.cursorr {
 		top: 48em;
 	}
 	#project {
@@ -1025,7 +1039,7 @@ section:nth-of-type(4) {
 	.color-mode {
 		display: none;
 	}
-	.cursor {
+	.cursorr {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1044,7 +1058,7 @@ section:nth-of-type(4) {
 	#project {
 		overflow: hidden;
 	}
-	.cursor::before {
+	.cursorr::before {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1086,7 +1100,7 @@ section:nth-of-type(4) {
 	h2 {
 		font-size: 2em;
 	}
-	.cursor {
+	.cursorr {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1101,7 +1115,7 @@ section:nth-of-type(4) {
 		pointer-events: none;
 	}
 
-	.cursor::before {
+	.cursorr::before {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1134,7 +1148,7 @@ section:nth-of-type(4) {
 	.navbar-collapse {
 		background: #FECC08;
 		text-align: center;
-		padding-bottom: 20px;
+		padding-bottom: 0px;
 	}
 
 	.navbar-expand-sm .navbar-nav .nav-link {
@@ -1166,7 +1180,7 @@ section:nth-of-type(4) {
 		position: relative;
 	}
 
-	.cursor {
+	.cursorr {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1181,7 +1195,7 @@ section:nth-of-type(4) {
 		pointer-events: none;
 	}
 
-	.cursor::before {
+	.cursorr::before {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1278,7 +1292,7 @@ section:nth-of-type(4) {
 		display: none;
 	}
 
-	.cursor {
+	.cursorr {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
@@ -1295,7 +1309,7 @@ section:nth-of-type(4) {
 		pointer-events: none;
 	}
 
-	.cursor::before {
+	.cursorr::before {
 		position: absolute;
 		justify-content: center;
 		align-content: center;
