@@ -4,6 +4,7 @@ body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
   background-image: linear-gradient(to right, #f9d423 0%, #ffbb00c9 100%);
+  cursor: none;
 }
 
 .full-screen {
@@ -17,6 +18,7 @@ body {
   padding: 8px 0px;
   border-radius: 50px;
   letter-spacing: 0.2px;
+  cursor: none;
 }
 
 ul {
@@ -35,6 +37,7 @@ a {
 }
 a:hover {
   color: #E96F6F !important;
+  cursor: none;
 }
 
 .navbar-brand .uil {
@@ -88,6 +91,7 @@ strong {
 }
 
 .custom-btn {
+  cursor: none;
   background: #f2f2f1;
   color: #5b5b5b;
   font-weight: bold;
@@ -100,16 +104,19 @@ strong {
   transition: all 0.4s ease;
 }
 .custom-btn:hover {
+  cursor: none;
   color: #E96F6F;
   font-size: 16px;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
 }
 .custom-btn.custom-btn-bg {
+  cursor: none;
   background: #2BC1FC;
   color: #ffffff;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
 }
 .custom-btn.custom-btn-bg:hover {
+  cursor: none;
   background: #E96F6F;
   color: #ffffff !important;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
@@ -271,7 +278,7 @@ strong {
   height: 32px;
   line-height: 32px;
   outline: none;
-  cursor: pointer;
+  cursor: none;
   margin-right: 10px;
 }
 .navbar-toggler:focus {
@@ -337,7 +344,7 @@ strong {
 
 .color-mode {
   font-weight: bold;
-  cursor: pointer;
+  cursor: none;
 }
 
 .color-mode colortxt:hover {
@@ -663,7 +670,7 @@ strong {
   color: #ffffff;
   font-weight: bold;
   border: 0;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.4s ease;
 }
 .contact-form .submit-btn:hover {
@@ -1044,6 +1051,7 @@ section:nth-of-type(4) {
   }
 
   .cursorr {
+    pointer-events: none;
     position: absolute;
     justify-content: center;
     align-content: center;
@@ -1057,7 +1065,6 @@ section:nth-of-type(4) {
     top: 32em;
     left: 45%;
     right: 50vw;
-    pointer-events: none;
   }
 
   .cursorr::before {
@@ -1089,4 +1096,69 @@ section:nth-of-type(4) {
     display: inline-block;
     vertical-align: top;
   }
+}
+/* div {  
+  display: inline-block;
+  padding: 20px;
+} */
+@keyframes click {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  transition: all 1s ease;
+  cursor: none;
+}
+
+.btn1, .btn2, .btn3 {
+  display: flexbox;
+  position: relative;
+  padding: 0px 5px;
+  color: #fff;
+  background: none;
+  border: 0px solid #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  cursor: none;
+  box-shadow: none;
+}
+.btn1:hover, .btn2:hover, .btn3:hover {
+  background: none;
+  color: none;
+}
+
+.cursor {
+  transition: 0.01s;
+  pointer-events: none;
+  z-index: 9999999;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
+}
+
+.cursor.style1 {
+  background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
+}
+
+.cursor.style2 {
+  background: radial-gradient(circle, #000 0%, #000 3.99%, #fff 10%, #fff 100%);
+}
+
+.cursor.style3 {
+  background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 68.99%, #fff 70%, #fff 100%);
+}
+
+.cursor.click {
+  animation: click 0.3s ease-in-out;
 }
