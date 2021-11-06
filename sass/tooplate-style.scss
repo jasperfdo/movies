@@ -1378,12 +1378,11 @@ body {
 	cursor: none;
 }
 
-.btn1 , .btn2 , .btn3 {
-	display: inline-block;
+
+
+.btn1 , .btn2 , .btn3 {	
+	display: flexbox;
 	position: relative;
-	margin: 0em;
-	margin-left: 0em;
-	margin-top: 0em;
 	padding: 0px 5px;
 	color: #fff;
 	background: none;
@@ -1398,6 +1397,7 @@ body {
 	}
 }
 .cursor {	
+	transition: .01s;
 	pointer-events: none;
 	z-index: 9999999;	
 	position: absolute;
