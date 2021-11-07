@@ -1382,47 +1382,83 @@ body {
 
 
 
-.btn1 , .btn2 , .btn3 {	
-	display: flexbox;
-	position: relative;
-	padding: 0px 5px;
-	color: #fff;
-	background: none;
-	border: 0px solid #fff;
-	border-radius: 3px;
-	font-size: 15px;
-	cursor: none;
-	box-shadow: none;
-	&:hover {
-		background: none;
-		color: none;
+// .btn1 , .btn2 , .btn3 {	
+// 	display: flexbox;
+// 	position: relative;
+// 	padding: 0px 5px;
+// 	color: #fff;
+// 	background: none;
+// 	border: 0px solid #fff;
+// 	border-radius: 3px;
+// 	font-size: 15px;
+// 	cursor: none;
+// 	box-shadow: none;
+// 	&:hover {
+// 		background: none;
+// 		color: none;
+// 	}
+// }
+
+@keyframes cursorAni {
+	from {
+		transform: scale(.2);
+	}
+	to {
+		transform: scale(.8);
 	}
 }
+
+@keyframes cursorAni1 {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(.2);
+	}
+}
+
 .cursor {	
-	transition: .01s;
+	// transition: .01s;
 	pointer-events: none;
 	z-index: 9999999;	
 	position: absolute;
-	width: 80px;
-	height: 80px;
-	background: #fff;
+	width: 20px;
+	height: 20px;
+	border: 3px solid white;
+	// background: #fff;
 	border-radius: 50%;
 	mix-blend-mode: exclusion;
-	background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+	animation: cursorAni .6s infinite alternate;
+	// background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
 }
-.cursor.style1 {
-	background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
-}
-.cursor.style2 {
-	background: radial-gradient(circle, #000 0%, #000 3.99%, #fff 10%, #fff 100%);
-}
-.cursor.style3 {
-	background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 68.99%, #fff 70%, #fff 100%);
-}
+// .cursor.style1 {
+// 	background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
+// }
+// .cursor.style2 {
+// 	background: radial-gradient(circle, #fff 0%, #fff 3.99%, #fff 10%, #fff 100%);
+// }
+// .cursor.style3 {
+// 	background: radial-gradient(circle, #000 0%, #000 3.99%, #000 4%, #000 50%, #000 70%, #fff 100%);
+// }
 .cursor.click {
 	animation: click .3s ease-in-out;
 }
 
+.cursor::after {
+	content: "";
+	width: 40px;
+	// background-color: grey;
+	height: 40px;
+	position: absolute;
+	border: 8px solid gray;
+	border-radius: 50%;
+	top: -13px;
+	left: -13px;
+	opacity: .8;
+	animation: cursorAni1 .6s infinite alternate;
+}
 
 // SMOOTH SCRROOL
 

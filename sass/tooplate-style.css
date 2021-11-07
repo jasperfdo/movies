@@ -1362,53 +1362,83 @@ body {
   cursor: none;
 }
 
-.btn1, .btn2, .btn3 {
-  display: flexbox;
-  position: relative;
-  padding: 0px 5px;
-  color: #fff;
-  background: none;
-  border: 0px solid #fff;
-  border-radius: 3px;
-  font-size: 15px;
-  cursor: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+@-webkit-keyframes cursorAni {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
-.btn1:hover, .btn2:hover, .btn3:hover {
-  background: none;
-  color: none;
+@keyframes cursorAni {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes cursorAni1 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+}
+
+@keyframes cursorAni1 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
 }
 
 .cursor {
-  -webkit-transition: .01s;
-  transition: .01s;
   pointer-events: none;
   z-index: 9999999;
   position: absolute;
-  width: 80px;
-  height: 80px;
-  background: #fff;
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
   border-radius: 50%;
   mix-blend-mode: exclusion;
-  background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
-}
-
-.cursor.style1 {
-  background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 49.99%, #fff 50%, #fff 100%);
-}
-
-.cursor.style2 {
-  background: radial-gradient(circle, #000 0%, #000 3.99%, #fff 10%, #fff 100%);
-}
-
-.cursor.style3 {
-  background: radial-gradient(circle, #fff 0%, #fff 3.99%, #000 4%, #000 68.99%, #fff 70%, #fff 100%);
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorAni .6s infinite alternate;
+          animation: cursorAni .6s infinite alternate;
 }
 
 .cursor.click {
   -webkit-animation: click .3s ease-in-out;
           animation: click .3s ease-in-out;
+}
+
+.cursor::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  top: -13px;
+  left: -13px;
+  opacity: .8;
+  -webkit-animation: cursorAni1 .6s infinite alternate;
+          animation: cursorAni1 .6s infinite alternate;
 }
 /*# sourceMappingURL=tooplate-style.css.map */
