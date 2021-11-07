@@ -21,7 +21,7 @@ Jasper Fernando
 
 -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
 </head>
 
 <body class="img-container" id="my-scrollbar">
@@ -376,19 +376,21 @@ Jasper Fernando
   <script src="./index.js"></script>
   <script src="js/smoothscroll.min.js"></script>
   <script src="js/mouseani.min.js"></script>
-  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-  <script src="js/scrollsmooth.js"></script>
+  <!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
+  <!-- <script src="js/scrollsmooth.js"></script> -->
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    
 
-  <script>
+  <!-- <script>
     window.addEventListener('scroll', function (e) {
       const target = document.querySelectorAll('.about-image , .col-lg-11 , .cursorr');
 
-      // console.log(target.style);
-      //hard code
-      // var scrolled = window.pageYOffset;
-      // var scrollrate = scrolled * -.5;
-      // target.style.transform = 'translate3d(0px, '+scrollrate+'px, 0px)';
-      //hard code
+      //// console.log(target.style);
+      //// hard code
+      //// var scrolled = window.pageYOffset;
+      //// var scrollrate = scrolled * -.5;
+      //// target.style.transform = 'translate3d(0px, '+scrollrate+'px, 0px)';
+      //// hard code
 
       var index = 0;
       var length = target.length;  //target.length is that it counts all the classes mentioned in target
@@ -410,9 +412,9 @@ Jasper Fernando
         }
       }
     });
-  </script>
+  </script> -->
 
-  <script>
+  <!-- <script>
     ScrollOut({
       threshold: .5,
       once: true,
@@ -422,7 +424,7 @@ Jasper Fernando
       //     }
       //  }
     });
-  </script>
+  </script> -->
 
 
 
