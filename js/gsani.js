@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
     
-    "(min-width: 800px)": function() {
+    "(min-width: 300px)": function() {
         gsap.from("#my-scrollbar", {opacity:1, backgroundColor: "black", duration:20})
         gsap.from(".navbar", {opacity:0, duration:.5, y: -150})
         gsap.from(".about-image", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1})
@@ -57,8 +57,3 @@ ScrollTrigger.matchMedia({
 
 
 });
-
-
-
-
-
