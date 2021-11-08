@@ -1,9 +1,13 @@
 // gsap.fromTo(".navbar", {y: -150, opacity:0, duration:1},{y: 0, opacity:1, duration:1})
 // gsap.fromTo(".about-image", {y: 100, opacity:0, duration:1},{y: 0, opacity:1, duration:1})
 
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
+    
     
     "(min-width: 300px)": function() {
         gsap.from("#my-scrollbar", {opacity:1, backgroundColor: "black", duration:20})
@@ -16,7 +20,8 @@ ScrollTrigger.matchMedia({
 
         let petl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".project"
+                trigger: ".project",
+                force3D: true
             }
         });
         
@@ -28,7 +33,8 @@ ScrollTrigger.matchMedia({
         
         let retl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".resume"
+                trigger: ".resume",
+                force3D: true
             }
         })
         
@@ -38,7 +44,8 @@ ScrollTrigger.matchMedia({
         
         let cotl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".contact"
+                trigger: ".contact",
+                force3D: true
             }
         })
         
@@ -48,7 +55,8 @@ ScrollTrigger.matchMedia({
         
         let fotl = gsap.timeline ({
             scrollTrigger: {
-                trigger: ".footer"
+                trigger: ".footer",
+                force3D: true
             }
         })
         
@@ -57,3 +65,5 @@ ScrollTrigger.matchMedia({
 
 
 });
+
+// TweenLite.ticker.fps(1);
