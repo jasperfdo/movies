@@ -659,6 +659,7 @@ strong {
   box-shadow: none;
   font-weight: bold;
   margin: 16px 0;
+  height: 370px;
 }
 .contact-form .form-control:not(textarea) {
   height: 48px;

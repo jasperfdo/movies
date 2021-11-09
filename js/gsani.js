@@ -13,10 +13,12 @@ ScrollTrigger.matchMedia({
         gsap.from("#my-scrollbar", {opacity:1, backgroundColor: "black", duration:20})
         gsap.from(".navbar", {opacity:0, duration:.5, y: -150})
         gsap.from(".about-image", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1})
-        gsap.from(".about-text", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1.3})
-        gsap.from(".animated", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1.5})
-        gsap.from(".notes", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1.7})
-        gsap.from(".custom-btn-group", {delay: 1.9, opacity:0, duration:1, y: 200, ease: "Power2.easeInOut"})
+        gsap.from("#abtxt", {opacity:0, duration:1, y: 500, stagger: 0.3, ease: "Power1.easeInOut", delay: 1})
+
+        // gsap.from(".about-text", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1.3})
+        // gsap.from(".animated", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1.5})
+        // gsap.from(".notes", {opacity:0, duration:1, y: 200, ease: "Power2.easeInOut", delay: 1.7})
+        // gsap.from(".custom-btn-group", {delay: 1.9, opacity:0, duration:1, y: 200, ease: "Power2.easeInOut"})
 
         let petl = gsap.timeline({
             scrollTrigger: {
