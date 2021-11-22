@@ -83,32 +83,6 @@ body {
   z-index: 1;
 }
 
-.slider {
-  position: relative;
-  padding: 0 22.5vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  z-index: 2;
-}
-
-.slider__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
 .slide {
   overflow: hidden;
 }

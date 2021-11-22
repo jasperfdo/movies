@@ -79,21 +79,21 @@ body{
   z-index: 1;
 }
 
-.slider{
-  position: relative; 
-  padding: 0 22.5vw;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  user-select: none;
-  cursor: grab;
-  z-index: 2;
+// .slider{
+//   position: relative; 
+//   padding: 0 22.5vw;
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+//   user-select: none;
+//   cursor: grab;
+//   z-index: 2;
   
-  &__inner{
-    display: flex;
-    position: relative;
-  }
-}
+//   &__inner{
+//     display: flex;
+//     position: relative;
+//   }
+// }
 
 .slide{
   overflow: hidden;
