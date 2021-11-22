@@ -270,7 +270,9 @@ body {
     padding-top: 20vh;
   }
   .slide img {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 100%;
     width: 130%;
     position: absolute;
