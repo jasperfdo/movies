@@ -303,7 +303,7 @@ body{
         // z-index: 3;
 
         &__inner {
-            width: 100%;
+            width: 100vw;
             display: flex;
             position: relative;
         }
@@ -329,7 +329,7 @@ body{
             // overflow: hidden;
             width: 80vw;
             height: 80vh;
-            padding-top: 20vh;
+            // padding-top: 20vh;
             
         }
 

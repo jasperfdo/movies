@@ -181,7 +181,7 @@ body {
     transform: translate(-50%, -50%);
   }
   .slider__inner {
-    width: 100%;
+    width: 100vw;
     display: flex;
     position: relative;
   }
@@ -204,7 +204,6 @@ body {
     object-fit: cover;
     width: 80vw;
     height: 80vh;
-    padding-top: 20vh;
   }
   .slide img {
     display: none;
