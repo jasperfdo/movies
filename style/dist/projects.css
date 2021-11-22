@@ -66,6 +66,21 @@ body {
   z-index: 1;
 }
 
+.slider {
+  position: relative;
+  padding: 0 22.5vw;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  user-select: none;
+  cursor: grab;
+  z-index: 2;
+}
+.slider__inner {
+  display: flex;
+  position: relative;
+}
+
 .slide {
   overflow: hidden;
 }
@@ -76,13 +91,6 @@ body {
   position: absolute;
   top: 0;
   height: 100%;
-}
-.slide__inner {
-  position: relative;
-  overflow: hidden;
-  width: 55vw;
-  padding-top: 56.5vh;
-  object-fit: cover;
 }
 .slide img {
   display: none;
@@ -194,8 +202,6 @@ body {
   }
   .slide__inner {
     object-fit: cover;
-    position: relative;
-    overflow: hidden;
     width: 80vw;
     height: 80vh;
     padding-top: 20vh;
