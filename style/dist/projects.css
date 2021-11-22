@@ -97,7 +97,7 @@ body {
   overflow: hidden;
   width: 55vw;
   padding-top: 56.5vh;
-  object-fit: contain;
+  object-fit: cover;
 }
 .slide img {
   display: none;

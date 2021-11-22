@@ -128,8 +128,8 @@ body {
   overflow: hidden;
   width: 55vw;
   padding-top: 56.5vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slide img {
