@@ -202,8 +202,8 @@ body {
   }
   .slide__inner {
     object-fit: cover;
-    width: 80vw;
-    height: 80vh;
+    width: 250vw;
+    height: 250vh;
   }
   .slide img {
     display: none;
