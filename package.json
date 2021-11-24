@@ -1,0 +1,16 @@
+{
+  "name": "jasperwebgl-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./index.css -o ./tailwind.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bounds.js": "^1.0.4",
+    "smooth-scrollbar": "^8.7.0"
+  }
+}
