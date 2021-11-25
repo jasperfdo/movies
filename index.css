@@ -11,10 +11,18 @@ body {
     scroll-behavior: smooth;
 }
 
-imgg {
-    opacity: 0;
-    transition: opacity 1s;
-}
+/* .nav {
+    position: fixed;
+} */
+/* 
+.smooth-scroll-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+} */
+
 
 .reveal {
     opacity: 1;
@@ -76,5 +84,11 @@ imgg {
 }
 
 .nav-dot:hover span {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.icons:hover span {
+    transition: opacity 1s;
     opacity: 1;
 }
