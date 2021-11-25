@@ -9,6 +9,8 @@ html {
 html,
 body {
     scroll-behavior: smooth;
+    margin: 0;
+    height: 100vh;
 }
 
 /* .nav {
