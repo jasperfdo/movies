@@ -1,9 +1,32 @@
 //watch the free video on how this demo was made
 // https://www.snorkl.tv/scrolltrigger-smooth-scroll/
+
+
 const locoScroll = new LocomotiveScroll({
 	el: document.querySelector(".scrollContainer"),
-	smooth: true
-});
+	smooth: true,
+    inertia: 0.8,    
+    getDirection: true,
+    mobile: {
+      breakpoint: 0,
+      smooth: true,
+      getDirection: true,
+    },
+    tablet: {
+      breakpoint: 0,
+      smooth: true,
+      getDirection: true,
+    },
+  });
+
+
+// const locoScroll = new LocomotiveScroll({
+// 	el: document.querySelector(".scrollContainer"),
+// 	smooth: true
+// });
+
+
+
 
 // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
 
@@ -35,6 +58,7 @@ var tl = gsap.timeline({ defaults: { duration: 1 } })
 tl.to(".htanim", { opacity: 1, y: -50, ease: 'Power2.easeInOut', stagger: .2 })
 	.to(".herowrk", { opacity: 1, y: -20, ease: 'Power2.easeInOut' }, "-=.5")
 	.fromTo(".imgg", { opacity: 0, x: 150, ease: 'Power2.easeInOut' }, { opacity: 1, x: -74, ease: "Expo.easeOut" }, "-=.5")
+	.fromTo(".imggg", { opacity: 0, x: 150, ease: 'Power2.easeInOut' }, { opacity: 1, x: -14, ease: "Expo.easeOut" }, "-=.5")
 	.fromTo(".header", { opacity: 0, y: -20, ease: 'Power5' }, { opacity: 1, y: 0, ease: 'Power5' }, "-=1.4")
 
 
