@@ -1,7 +1,5 @@
 //watch the free video on how this demo was made
 // https://www.snorkl.tv/scrolltrigger-smooth-scroll/
-
-
 const locoScroll = new LocomotiveScroll({
 	el: document.querySelector(".scrollContainer"),
 	smooth: true
@@ -45,7 +43,7 @@ tl.to(".htanim", { opacity: 1, y: -50, ease: 'Power2.easeInOut', stagger: .2 })
 
 let wrtl = gsap.timeline({defaults: {}})
 	.fromTo(".worktitle, .char", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "Power1.easeInOut"})
-	.fromTo(".word", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1.5")	
+	.fromTo(".word", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1")	
 
 
 
