@@ -67,13 +67,15 @@ tl.to(".htanim", { opacity: 1, y: -50, ease: 'Power2.easeInOut', stagger: .2 })
 
 let wrtl = gsap.timeline({defaults: {}})
 	.fromTo(".worktitle, .char", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "Power1.easeInOut"})
-	.fromTo(".word", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1")	
+	.fromTo(".word", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1")
+	.fromTo(".tools", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1")
+	.fromTo(".icons", {y:150, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=.5")
 
 
 
 ScrollTrigger.create( {
-	trigger: '.worktitle',
-	start: "top bottom",
+	trigger: '.worktitle, .word, .tools, .icons',
+	start: "50% 50%",
 	end: "+=300",
 	scroller: ".scrollContainer",
 	animation:wrtl
