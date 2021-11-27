@@ -70,17 +70,35 @@ let wrtl = gsap.timeline({defaults: {}})
 	.fromTo(".word", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1")
 	.fromTo(".tools", {y:-50, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=1")
 	.fromTo(".icons", {y:150, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"-=.5")
-
+	
+	
 
 
 ScrollTrigger.create( {
-	trigger: '.worktitle, .word, .tools, .icons',
-	start: "50% 50%",
+	trigger: '.worktitle, .word, .tools, .icons, .madetools',
+	start: "top bottom",
 	end: "+=300",
 	scroller: ".scrollContainer",
 	animation:wrtl
 
 })
+
+let prtl = gsap.timeline({defaults: {}})
+	.fromTo(".madetools", {y:150, opacity: 0, duration: 1}, {y:0, opacity: 1, ease: "slow.easeOut", stagger: 0.050},"1")
+	// .fromTo(".proimg", { opacity: 0, duration: 1}, {opacity: 1, ease: "slow.easeOut"},"1")
+	.to(".proimg", {opacity: 1, duration: 1})
+
+
+ScrollTrigger.create( {
+	trigger: '.madetools, .proimg',
+	start: "top bottom",
+	end: "+=300",
+	scroller: ".scrollContainer",
+	animation:prtl
+
+})
+
+
 //gsap
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
